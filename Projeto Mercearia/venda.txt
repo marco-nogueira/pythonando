@@ -2,3 +2,6 @@ Banana|12|Frutas|Marco|Pedro|3|07/07/24
 Banana|12|Frutas|Marco|Pedro|3|07/07/24
 Banana|12|Frutas|Marco|Pedro|3|07/07/24
 Banana|12|Frutas|Marco|Pedro|3|07/07/24
+Banana|12|Frutas|Marco|Pedro|3|07/07/24
+Banana|12|Frutas|Marco|Pedro|3|07/07/24
+Banana|12|Frutas|Marco|Pedro|3|07/07/24
