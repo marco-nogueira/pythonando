@@ -13,7 +13,7 @@ class DaoCategoria:
             cls.categoria = arq.readlines()
 
         cls.categoria = list(map(lambda x: x.replace('\n', ''), cls.categoria))
-        print(cls.categoria)    
+        # print(cls.categoria)    
         
         cat = []
         for i in cls.categoria:
@@ -76,9 +76,9 @@ class DaoFornecedor:
     def salvar(cls, fornecedor: Fornecedor):
         with open('fornecedores.txt', 'a') as arq:
             arq.writelines(fornecedor.nome + "|"
-                           + fornecedor.cnpj + "|""
-                           + fornecedor.telefone + "|"
-                           + fornecedor.categoria)
+                            + fornecedor.cnpj + "|"
+                            + fornecedor.telefone + "|"
+                            + fornecedor.categoria)
             arq.writelines('\n')
 
     @classmethod
@@ -99,10 +99,10 @@ class DaoPessoa:
     def salvar(cls, pessoas: Pessoa):
         with open('clientes.txt', 'a') as arq:
             arq.writelines(pessoas.nome + "|"
-                           + pessoas.telefone + "|"
-                           + pessoas.cpf + "|"
-                           + pessoas.email + "|"
-                           + pessoas.endereco)
+                            + pessoas.telefone + "|"
+                            + pessoas.cpf + "|"
+                            + pessoas.email + "|"
+                            + pessoas.endereco)
             arq.writelines('\n')
 
     @classmethod
@@ -124,11 +124,11 @@ class DaoFuncionario:
     def salvar(cls, funcionario: Funcionario):
         with open('funcionarios.txt', 'a') as arq:
             arq.writelines(funcionario.clt + "|"
-                           + funcionario.nome + "|"
-                           + funcionario.telefone + "|"
-                           + funcionario.cpf + "|"
-                           + funcionario.email + "|"
-                           + funcionario.endereco)
+                            + funcionario.nome + "|"
+                            + funcionario.telefone + "|"
+                            + funcionario.cpf + "|"
+                            + funcionario.email + "|"
+                            + funcionario.endereco)
             arq.writelines('\n')
 
     @classmethod
@@ -145,21 +145,20 @@ class DaoFuncionario:
 
         return funcionario
         
+# # Cria Categorias
+# DaoCategoria.salvar('Frutas')
+# DaoCategoria.salvar('Verduras')
+# DaoCategoria.salvar('Legumes')
+# DaoCategoria.ler()
 
-# Cria Categorias
-DaoCategoria.salvar('Frutas')
-DaoCategoria.salvar('Verduras')
-DaoCategoria.salvar('Legumes')
-DaoCategoria.ler()
+# # Cria Vendas
+# x = Produtos('Banana', '12', 'Frutas')     
+# y = Venda(x, 'Marco', 'Pedro', '3')
+# DaoVenda.salvar(y)
+# a = DaoVenda.ler()
+# print(a[0].itensVendidos.nome)
 
-# Cria Vendas
-x = Produtos('Banana', '12', 'Frutas')     
-y = Venda(x, 'Marco', 'Pedro', '3')
-DaoVenda.salvar(y)
-a = DaoVenda.ler()
-print(a[0].itensVendidos.nome)
-
-# Cria Produto em Estoque
-x_estoque = Estoque(x, '200')
-DaoEstoque.salvar(x_estoque)
-DaoEstoque.ler()
+# # Cria Produto em Estoque
+# x_estoque = Estoque(x, '200')
+# DaoEstoque.salvar(x_estoque)
+# DaoEstoque.ler()
