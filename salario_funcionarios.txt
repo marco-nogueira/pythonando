@@ -1,0 +1,4 @@
+Novo salário do lira é 1100.0
+Novo salário do alon é 5500.0
+Novo salário do amanda é 7700.000000000001
+Novo salário do marcus é 935.0000000000001

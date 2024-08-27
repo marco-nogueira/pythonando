@@ -3,3 +3,4 @@ Legumes
 frios
 Carnes
 Frutas
+Raízes

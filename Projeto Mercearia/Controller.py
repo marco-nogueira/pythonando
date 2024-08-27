@@ -69,14 +69,14 @@ class ControllerEstoque:
     def cadastrarProdutos(self, nome, preco, categoria, quantidade):
         x = DaoEstoque.ler()
         y = DaoCategoria.ler()
-        
         h = list(filter(lambda x: x.categoria == categoria, y))
         est = list(filter(lambda x: x.produto.nome == nome, x))
         
         if len(h) > 0:
             if len(est) == 0:
                 produto = Produtos(nome, preco, categoria)
-                DaoEstoque.salvar(produto, quantidade)
+                estoque = Estoque(produto, quantidade)
+                DaoEstoque.salvar(estoque)  # Pass the Estoque object
                 print('Produto cadastrado com sucesso')
             else:
                 print('O produto já existe no estoque')
@@ -86,11 +86,12 @@ class ControllerEstoque:
         
         
         
-# a = ControllerCategoria()
-# a.cadastrarCategoria('Frutas')
+a = ControllerCategoria()
+a.cadastrarCategoria('Raízes')
 # a.removerCategoria('Frutas')
 # a.alterarCategoria('Frutas', 'Carnes')
 # a.mostrarCategoria()
 
-a = ControllerEstoque()
-a.cadastrarProdutos('Maçã', '5', 'Frutas',  10)
+# a = ControllerEstoque()
+# prod = Produtos(nome='Pessego', preco='5', categoria='Frutas', quantidade=2)
+# a.cadastrarProdutos(prod)
